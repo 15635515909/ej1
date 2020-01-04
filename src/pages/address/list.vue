@@ -118,10 +118,6 @@
         });
       })
       
-
-
-
-      
         },
         toUpdateHandler(row){
             this.form-=row;
