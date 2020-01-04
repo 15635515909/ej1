@@ -54,134 +54,76 @@ export const constantRoutes = [
       meta: { title: 'Dashboard', icon: 'dashboard' }
     }]
   },
-
-  // {
-  //   path: '/example',
-  //   component: Layout,
-  //   redirect: '/example/table',
-  //   name: 'Example',
-  //   meta: { title: 'Example', icon: 'example' },
-  //   children: [
-  //     {
-  //       path: 'table',
-  //       name: 'Table',
-  //       component: () => import('@/views/table/index'),
-  //       meta: { title: 'Table', icon: 'table' }
-  //     },
-  //     {
-  //       path: 'tree',
-  //       name: 'Tree',
-  //       component: () => import('@/views/tree/index'),
-  //       meta: { title: 'Tree', icon: 'tree' }
-  //     }
-  //   ]
-  // },
-
   {
     path: '/customer',
     component: Layout,
-    children: [
-      {
-        path: 'list',
-        name: 'customerlist',
-        component: () => import('@/pages/customer/list'),
-        meta: { title: '顾客管理', icon: 'form' }
-      }
-    ]
-  },
-
-  // {
-  //   path: '/nested',
-  //   component: Layout,
-  //   redirect: '/nested/menu1',
-  //   name: 'Nested',
-  //   meta: {
-  //     title: 'Nested',
-  //     icon: 'nested'
-  //   },
-  //   children: [
-  //     {
-  //       path: 'menu1',
-  //       component: () => import('@/views/nested/menu1/index'), // Parent router-view
-  //       name: 'Menu1',
-  //       meta: { title: 'Menu1' },
-  //       children: [
-  //         {
-  //           path: 'menu1-1',
-  //           component: () => import('@/views/nested/menu1/menu1-1'),
-  //           name: 'Menu1-1',
-  //           meta: { title: 'Menu1-1' }
-  //         },
-  //         {
-  //           path: 'menu1-2',
-  //           component: () => import('@/views/nested/menu1/menu1-2'),
-  //           name: 'Menu1-2',
-  //           meta: { title: 'Menu1-2' },
-  //           children: [
-  //             {
-  //               path: 'menu1-2-1',
-  //               component: () => import('@/views/nested/menu1/menu1-2/menu1-2-1'),
-  //               name: 'Menu1-2-1',
-  //               meta: { title: 'Menu1-2-1' }
-  //             },
-  //             {
-  //               path: 'menu1-2-2',
-  //               component: () => import('@/views/nested/menu1/menu1-2/menu1-2-2'),
-  //               name: 'Menu1-2-2',
-  //               meta: { title: 'Menu1-2-2' }
-  //             }
-  //           ]
-  //         },
-  //         {
-  //           path: 'menu1-3',
-  //           component: () => import('@/views/nested/menu1/menu1-3'),
-  //           name: 'Menu1-3',
-  //           meta: { title: 'Menu1-3' }
-  //         }
-  //       ]
-  //     },
-  //     {
-  //       path: 'menu2',
-  //       component: () => import('@/views/nested/menu2/index'),
-  //       meta: { title: 'menu2' }
-  //     }
-  //   ]
-  // },
-  {
-    path: '/systemsetting',
-    component: Layout,
-    name: 'SystemsettingList',
-    meta: { title: '系统配置', icon: 'tree' },
-        children: [
-                  {
-                    path: 'List',
-                    component: () => import('@/pages/systemsetting/kind/list'),
-                    name: 'KindList',
-                    meta: { title: '栏目管理', icon: 'user'}
-                  },
-                  
-                  {
-                    path: 'List1',
-                    component: () => import('@/pages/systemsetting/conduct/list'),
-                    name: 'ConductList',
-                    meta: { title: '产品管理', icon: 'tree' }
-                  }
-                ]
-    
+    children: [{
+      path: 'list',
+      name: 'Customer_list',
+      component: () => import('@/pages/customer/list'),
+      meta: { title: '顾客管理', icon: 'dashboard' }
+    }]
   },
   {
     path: '/employee',
     component: Layout,
-    children: [
-      {
-        path: 'List',
-        name: 'employee_List',
-        component:() => import('@/pages/employee/list'),
-        meta: { title: '员工管理', icon: 'user' }
-      }
-    ]
+    children: [{
+      path: 'list',
+      name: 'Employee_list',
+      component: () => import('@/pages/employee/list'),
+      meta: { title: '员工管理', icon: 'dashboard' }
+    }]
   },
-
+  {
+    path: '/product',
+    component: Layout,
+    children: [{
+      path: 'list',
+      name: 'Product_list',
+      component: () => import('@/pages/product/list'),
+      meta: { title: '产品管理', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/category',
+    component: Layout,
+    children: [{
+      path: 'list',
+      name: 'Category_list',
+      component: () => import('@/pages/category/list'),
+      meta: { title: '栏目管理', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/order',
+    component: Layout,
+    children: [{
+      path: 'list',
+      name: 'Order_list',
+      component: () => import('@/pages/order/list'),
+      meta: { title: '订单管理', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/comment',
+    component: Layout,
+    children: [{
+      path: 'list',
+      name: 'Comment_list',
+      component: () => import('@/pages/comment/list'),
+      meta: { title: '评论管理', icon: 'dashboard' }
+    }]
+  },
+  {
+    path: '/address',
+    component: Layout,
+    children: [{
+      path: 'list',
+      name: 'Address_list',
+      component: () => import('@/pages/address/list'),
+      meta: { title: '地址管理', icon: 'dashboard' }
+    }]
+  },
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
